@@ -1,0 +1,409 @@
+/* General Styles */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+body {
+    padding-top: 80px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Enhanced Header Styles */
+.navbar {
+    background: linear-gradient(90deg, #001f3f, #004aad);
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffdd57 !important;
+}
+
+.navbar-nav > li > a {
+    color: #fff !important;
+    font-size: 16px;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffdd57 !important;
+    transform: translateY(-3px);
+}
+
+.navbar-toggle {
+    border-color: #fff;
+    background-color: #004aad;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle:hover {
+    background-color: #ffdd57;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav > li > a {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Font Awesome Icons Styling */
+.navbar-nav > li > a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+/* Banner Styles */
+#banner_image {
+    background: url('../images/intro-bg_1.jpg') no-repeat center center/cover;
+    background-size: cover;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+#banner_image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+#banner_content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1); /* Light glass effect */
+    backdrop-filter: blur(10px);
+    padding: 40px 60px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#banner_content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+#banner_content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#banner_content .btn {
+    background: linear-gradient(90deg, #ff5722, #ff7043);
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#banner_content .btn:hover {
+    background: linear-gradient(90deg, #ff7043, #ff5722);
+    color: #fff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+#banner_content .btn i {
+    margin-left: 10px;
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+
+#banner_content .btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Item List Styles */
+#item_list {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around; /* Center items with space between */
+    gap: 30px; /* Increased gap for better spacing */
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    background: #fff;
+    border-radius: 12px; /* Smoother corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 280px; /* Set a max width for consistency */
+}
+
+.thumbnail:hover {
+    transform: translateY(-10px); /* Lift effect for a more dynamic hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Stronger hover shadow */
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    
+    object-fit: cover; /* Ensure image covers container without distortion */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.05); /* Slight zoom effect for images */
+}
+
+.thumbnail h3 {
+    font-size: 20px;
+    color: #004aad;
+    font-weight: 600; /* Bolder text for headings */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.thumbnail h3:hover {
+    color: #ff5722; /* Color change on hover for interactivity */
+}
+
+.thumbnail p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5; /* Improved readability */
+    margin-bottom: 20px;
+}
+
+.thumbnail .caption {
+    position: relative;
+}
+
+.thumbnail .caption i {
+    font-size: 22px; /* Slightly larger icon for better visibility */
+    margin-right: 10px;
+    color: #ff5722;
+    transition: color 0.3s ease;
+}
+
+.thumbnail .caption i:hover {
+    color: #004aad;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #item_list {
+        justify-content: center;
+    }
+
+    .thumbnail {
+        margin-bottom: 30px;
+        width: 90%; /* Adjust for smaller screen sizes */
+    }
+
+    #banner_content h1 {
+        font-size: 32px;
+    }
+
+    #banner_content p {
+        font-size: 16px;
+    }
+
+    #banner_content .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* Enhanced Footer Styles */
+footer {
+    background: linear-gradient(90deg, #001f4d, #004aad);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    margin-top: 50px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+footer .footer-links a {
+    color: #ffdd57;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+footer p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+footer p a {
+    color: #ffdd57;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+footer p a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 25px;
+}
+
+footer .social-media a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffdd57;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+footer .social-media a:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 12px rgba(255, 221, 87, 0.8);
+}
+
+footer .social-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: opacity 0.4s ease;
+}
+
+footer .social-media img:hover {
+    opacity: 0.8;
+}
+
+/* Google Translate Styling */
+#google_translate_element {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+#google_translate_element:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer .footer-links {
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer .footer-links a {
+        font-size: 16px;
+    }
+
+    footer .social-media {
+        justify-content: center;
+    }
+
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
