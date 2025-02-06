@@ -11,7 +11,7 @@ if (!isset($_SESSION['email'])) {
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cart | Life Style Store</title>
+        <title>Cart | Blaster obline Store</title>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="js/jquery.js"></script>

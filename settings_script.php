@@ -24,13 +24,13 @@ $row = mysqli_fetch_array($result);
 $orig_pass = $row['password'];
 
 if ($new_pass != $new_pass1) {
-	$error = "<span class='red'>The two passwords don't match</span>";
+	$error = "The two passwords don't match";
     header('location: settings.php?error= ' . $error);
 } else {
     if ($old_pass == $orig_pass) {
         $query = "UPDATE  users SET password = '" . $new_pass . "' WHERE email = '" . $_SESSION['email'] . "'";
         mysqli_query($con, $query) or die($mysqli_error($con));
-        $error = "<span class='red'>Password Updated</span>";
+        $error = "Password Updated";
         header('location: settings.php?error= ' . $error);
     } else{
     	$error = "<span class='red'>Wrong Old Password</span>";

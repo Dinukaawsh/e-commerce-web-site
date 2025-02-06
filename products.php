@@ -12,7 +12,7 @@ require("common.php");
         <!--instructs browser on how to control the page's dimensions and scaling-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Title of products page-->
-        <title>Products | Life Style Store</title>
+        <title>Products | Blaster obline Store</title>
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
         <!-- Custom CSS -->

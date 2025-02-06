@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us | Life Style Store</title>
+    <title>About Us | Blaster obline Store</title>
 
     <!-- External Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

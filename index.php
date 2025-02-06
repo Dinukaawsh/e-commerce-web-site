@@ -20,7 +20,7 @@ if (isset($_SESSION['email'])) {
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!--Title of index page-->
-        <title>Welcome | Life Style Store</title>
+        <title>Welcome | Blaster obline Store</title>
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
         <!-- Custom CSS -->
